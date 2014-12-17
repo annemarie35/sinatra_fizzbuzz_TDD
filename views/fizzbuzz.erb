@@ -1,0 +1,15 @@
+<h1>Fizz Buzz <%= @name %> !</h1>
+
+<form action="/fizzbuzz" method="post">
+
+  <label>
+    Proposer un chiffre, si c'est un multiple de 3, le programme vous renverra "Fizz"
+    <input type="number" name="chiffre" />
+  </label>
+  <input type="submit"/>
+  
+</form>
+
+<p>
+<%= @result %>
+</p>

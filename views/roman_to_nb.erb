@@ -1,0 +1,16 @@
+<h1>Roman to Number <%= @name %> !</h1>
+
+<h2>Entrez un chiffre romain</h2>
+
+<form action="/roman_to_nb" method="post">
+  
+  <label>
+    Proposer un chiffre romain
+    <input type="text" name="roman" />
+  </label>
+  <input type="submit"/>
+</form>
+
+<p>
+<%= @result %>
+</p>
