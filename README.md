@@ -16,5 +16,4 @@ Le deuxième objectif est de faire du TDD et d'utiliser rspec.
 
 - faire un git clone
 - bundle install
-- lancer les tests (il n'y en a pas à ce jour)
-
+- lancer les tests avec la commande `rspec`
