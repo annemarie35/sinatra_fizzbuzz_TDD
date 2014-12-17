@@ -1,17 +1,20 @@
-#sinatra_fizzbuzz_TDD
+#Mes p'tits programmes
 ====================
 
+## Dernière mise à jour : 17 décembre 2014
+
 ## But du projet : 
-Intégrer fizzbuzz dans Sinatra le tout en TDD
-Utilisation de 'minitest/autorun'
 
+Découvrir Sinatra en créant une application permettant d'avoir une interface pour plusieurs programmes développés pendant les Katas que nous faisons à Simplon : 
 
-##Lien de référence : http://panierter-pinguin.de/blog/?p=188
-	1 -  Installation de gems
-		gem install rspec
-		gem install rack-test
+- fizzbuzz
+- Roman to Number
 
-	2 - Créer un répertoire "rspec" et y ajouter des fichiers
-		- index_spec.rb
-		- spec.opts
-		- spec_helper.rb
+Le deuxième objectif est de faire du TDD et d'utiliser rspec.
+
+## Comment récupérer cette appli :
+
+- faire un git clone
+- bundle install
+- lancer les tests (il n'y en a pas à ce jour)
+
