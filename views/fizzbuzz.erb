@@ -1,15 +1,29 @@
-<h1>Fizz Buzz <%= @name %> !</h1>
+<div class="container">
+	<div class="row">
+		<h1>Fizz Buzz <%= @name %> !</h1>
+		<p>Proposer un chiffre, si c'est un multiple de 3, le programme vous renverra "Fizz"</p>
+		<p>Si c'est un multiple de 5, ce sera "Buzz</p>
+		<p>Et si par chance, c'est un multiple de 3 et de 5, vous aurez la joie de lire "FizzBuzz"</p>
+		</div>
 
-<form action="/fizzbuzz" method="post">
+	<div class="row">
+		<form action="/fizzbuzz" method="post">
+			<div class="form-group">
+			  <label>
+			    Proposez un chiffre supérieur à 0
+			    <input type="number" name="chiffre"/ class="form-control" >
+			  </label>
+			</div>
 
-  <label>
-    Proposer un chiffre, si c'est un multiple de 3, le programme vous renverra "Fizz"
-    <input type="number" name="chiffre" />
-  </label>
-  <input type="submit"/>
-  
-</form>
+			<div class="form-group">
+			  <input type="submit" value="Validez" class="btn btn-primary" />
+			</div>  
+		</form>
+	</div>
 
-<p>
-<%= @result %>
-</p>
+	<div class="row">
+		<i class="fa fa-quote-left fa-3x pull-left fa-border"><h1><%= @result %></h1></i>
+
+
+	</div>
+</div>

@@ -1,20 +1,31 @@
-<h1>Roman to Number <%= @name %> !</h1>
+<div class="container">
+	<div class="row">
+		<h1>Roman to Number <%= @name %> !</h1>
+		<p>Le but de ce programme est de transformer un chiffre romain en chiffre arabe.</p>
+		<p>	Par exemple, vous proposez "VII", le programme vous renvoie le chiffre 7.</p>
+	</div>
 
-<h2>Entrez un chiffre romain</h2>
+	<div class="row">
 
-<form action="/roman_to_nb" method="post">
-  
-  <label>
-    Proposer un chiffre romain
-    <input type="text" name="roman" />
-  </label>
+		<form action="/roman_to_nb" method="post">
+			<div class="form-group">
+		  
+			  <label>
+			    Entrez un chiffre romain
+			    <input type="text" name="roman" />
+			  </label>
+			  <input type="submit" value="Validez" class="btn btn-primary"/>
+			</div>
 
-  <input type="submit"/>
+		</form>
+	</div>
 
-</form>
+	<div class="row">
+		<i class="fa fa-quote-left fa-3x pull-left fa-border"><h1><%= @result %></h1></i>
+	</div>
 
-<p>
+	<div class="row">
+		Nb : Bug inside !!!! Help needed, <a href="https://github.com/annemarie35/sinatra_fizzbuzz_TDD">see my github account here</a>
+	</div>
 
-<%= @result %>
-
-</p>
+</div>

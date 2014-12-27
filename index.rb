@@ -1,6 +1,6 @@
 require 'sinatra'
 require './fizz_buzz_machine'
-require './roman_to_nb_machine'
+require './roman_to_nb'
 #require 'sinatra-reloader'
 
 set :public_folder, 'public'
@@ -31,7 +31,7 @@ end
 
 post '/roman_to_nb' do
   roman = params[:roman].to_i
-  @result = roman_to_number(roman)
+  @result = roman_to_nb(roman)
   erb :roman_to_nb
 end
 
