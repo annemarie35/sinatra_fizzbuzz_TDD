@@ -10,6 +10,10 @@ get '/' do
   erb :index
 end
 
+get '/road_map' do
+  erb :road_map
+end
+
 get '/index' do
   @name = "Simplon"
   erb :index
