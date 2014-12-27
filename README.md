@@ -1,7 +1,6 @@
 #Mes p'tits programmes
 ====================
 
-## Dernière mise à jour : 17 décembre 2014
 
 ## But du projet : 
 
@@ -10,10 +9,14 @@ Découvrir Sinatra en créant une application permettant d'avoir une interface p
 - fizzbuzz
 - Roman to Number
 
-Le deuxième objectif est de faire du TDD et d'utiliser rspec.
+Le tout en TDD et en utilisant rspec.
+
+
 
 ## Comment récupérer cette appli :
 
 - faire un git clone
 - bundle install
 - lancer les tests avec la commande `rspec`
+
+- lancer le serveur, `ruby index.rb`
