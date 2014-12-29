@@ -5,10 +5,12 @@ ruby '2.1.3'
 gem "rack"
 gem "sinatra"
 gem "activesupport"
+gem "pg"
 
 group :development do
-  gem 'shotgun'
-  gem 'sinatra-reloader'
+  gem "shotgun"
+  gem "sinatra-reloader"
+  gem "unicorn"
 end
 
 group :test do
