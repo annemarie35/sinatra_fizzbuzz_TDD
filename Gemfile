@@ -6,11 +6,11 @@ gem "rack"
 gem "sinatra"
 gem "activesupport"
 gem "pg"
+gem "puma"
 
 group :development do
   gem "shotgun"
   gem "sinatra-reloader"
-  gem "unicorn"
 end
 
 group :test do

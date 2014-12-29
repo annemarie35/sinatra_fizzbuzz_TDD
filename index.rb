@@ -1,7 +1,8 @@
 require 'sinatra'
 require './fizz_buzz_machine'
 require './roman_to_nb'
-#require 'sinatra-reloader'
+
+configure { set :server, :puma }
 
 set :public_folder, 'public'
 
