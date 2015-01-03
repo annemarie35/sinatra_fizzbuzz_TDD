@@ -13,10 +13,16 @@ Le tout en TDD et en utilisant rspec.
 
 
 
+
+
 ## Comment récupérer cette appli :
 
 - faire un git clone
-- bundle install
+- lancer `bundle install`
 - lancer les tests avec la commande `rspec`
 
-- lancer le serveur, `ruby index.rb`
+- lancer le serveur, `ruby index.rb` ou `puma config.ru`
+
+## Déployement :
+
+- l'appli est visible en ligne à l'adresse [https://simplon2015exercices.herokuapp.com/](https://simplon2015exercices.herokuapp.com/)
