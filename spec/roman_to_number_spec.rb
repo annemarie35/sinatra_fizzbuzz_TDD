@@ -61,6 +61,9 @@ describe "roman_to_nb" do
 	it "XCIX donne 99" do
 		expect(roman_to_nb("XCIX")).to equal (99)
 	end
+	it "CDIV donne 404" do
+		expect(roman_to_nb("CDIV")).to equal (404)
+	end
 
 end
 

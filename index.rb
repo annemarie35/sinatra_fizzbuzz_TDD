@@ -1,6 +1,6 @@
 require 'sinatra'
 require './fizz_buzz_machine'
-require './roman_to_nb'
+require './roman_to_nb_machine'
 
 configure { set :server, :puma }
 
@@ -35,11 +35,17 @@ post '/fizzbuzz' do
 end
 
 post '/roman_to_nb' do
-  roman = params[:roman].to_i
+  roman = params[:roman].to_s  
   @result = roman_to_nb(roman)
   erb :roman_to_nb
-end
+  end
+
 
 get '/about' do
   erb :about
+end
+
+not_found do
+  status 404
+  'not found'
 end

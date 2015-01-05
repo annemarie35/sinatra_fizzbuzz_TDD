@@ -1,7 +1,6 @@
 def roman_to_nb(roman)
 
-	romans = {"I" => 1, "V" => 5, "X" => 10, "L" => 50, "C" => 100, "M" => 1000}
-	roman = roman.to_s #obligée de mettre ça pour la version sinatra
+	romans = {"I" => 1, "V" => 5, "X" => 10, "L" => 50, "C" => 100, "D" => 500, "M" => 1000}
 
 	roman_inverse = roman.split('').reverse
 	number = romans[roman_inverse[0]]
