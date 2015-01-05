@@ -36,3 +36,11 @@ h1 {
     text-shadow: 1px 1px 1px #ccc;
     font-size: 4em;
 }
+
+
+table {
+display: table;
+border-collapse: separate;
+border-spacing: 2px;
+border-color: gray; }
+
