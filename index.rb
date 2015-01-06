@@ -1,6 +1,7 @@
 require 'sinatra'
 require './fizz_buzz_machine'
 require './roman_to_nb_machine'
+require 'sinatra/formkeeper'
 
 configure { set :server, :puma }
 
@@ -35,7 +36,7 @@ post '/fizzbuzz' do
 end
 
 post '/roman_to_nb' do
-  roman = params[:roman].to_s  
+  roman = params[:roman]
   @result = roman_to_nb(roman)
   erb :roman_to_nb
   end

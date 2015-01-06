@@ -7,6 +7,7 @@ gem "sinatra"
 gem "activesupport"
 gem "pg"
 gem "puma"
+gem 'sinatra-formkeeper'
 
 group :development do
   gem "shotgun"
