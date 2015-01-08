@@ -37,6 +37,14 @@ get '/contact' do
   erb :contact
 end
 
+get '/garros' do
+  erb :garros
+end
+
+post '/garros' do
+  erb :garros
+end
+
 post '/fizzbuzz' do
   chiffre = params[:chiffre].to_i
   @result = fizz_buzz(chiffre)

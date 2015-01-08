@@ -64,12 +64,6 @@ describe "roman_to_nb" do
 	it "CDIV donne 404" do
 		expect(roman_to_nb("CDIV")).to equal (404)
 	end
-	#it "1 est un integer renvoie message d erreur" do
-	#	expect(roman_to_nb(1)).to eq ("Veuillez entrer un chiffre romain svp")
-	#end
-	it "renvoie une alerte si il y a une erreur dans le chiffre romain" do
-		expect(roman).to eq(true)
-	end
 end
 
 
