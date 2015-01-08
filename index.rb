@@ -42,7 +42,7 @@ get '/garros' do
 end
 
 post '/garros' do
-  erb :garros
+   erb :garros
 end
 
 post '/fizzbuzz' do
