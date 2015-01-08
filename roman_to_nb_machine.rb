@@ -23,8 +23,8 @@ def roman_to_nb(roman)
 			elsif romans[next_letter] >= romans[letter]
 				number += romans[next_letter]
 			end
-		 
-	   	end
+		
+		end
 		
 		number
 
