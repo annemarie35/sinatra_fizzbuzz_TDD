@@ -50,16 +50,16 @@ describe "roman_to_nb" do
 		expect(roman_to_nb("CLVII")).to equal (157)
 	end
 	it "MV donne 1005" do
-		expect(roman_to_nb("MV")).to equal (1005)
+		expect(roman_to_nb('MV')).to equal (1005)
 	end
 	it "MCMXXXII donne 1932" do
-		expect(roman_to_nb("MCMXXXII")).to equal (1932)
+		expect(roman_to_nb('MCMXXXII')).to equal (1932)
 	end
 	it "XC donne 90" do
-		expect(roman_to_nb("XC")).to equal (90)
+		expect(roman_to_nb('XC')).to equal (90)
 	end
 	it "XCIX donne 99" do
-		expect(roman_to_nb("XCIX")).to equal (99)
+		expect(roman_to_nb('XCIX')).to equal (99)
 	end
 	it "CDIV donne 404" do
 		expect(roman_to_nb('CDIV')).to equal (404)
