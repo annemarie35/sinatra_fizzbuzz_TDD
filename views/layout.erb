@@ -12,17 +12,39 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
   </head>
-  <body>
-  <div class="container">
-  	<ul class="list-inline">
-    <li><a class="btn" href="/index">Index</a></li>
-  	<li><a href="/about">A propos</a></li>
-  	<li><a href="/fizzbuzz">FizzBuzz</a></li>
-  	<li><a href="/roman_to_nb">Roman To Number</a></li>
-    <li><a href="/road_map">Feuille de route</a></li>
-    </ul>
-  </div>
 
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+       <ul class="nav navbar-nav">
+          <li class="active"><a href="/index">Index<span class="sr-only">(current)</span></a></li>
+          <li><a href="/road_map">Feuille de route</a></li>
+          <li><a href="/about">A propos</a></li>
+          <li><a href="/contact">Contact</a></li>
+           <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Programmes <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="/fizzbuzz">FizzBuzz</a></li>
+                <li><a href="/roman_to_nb">Roman to number</a></li>
+                <li><a href="#">Garros</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+        </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://github.com/annemarie35" class="icones"><i class="fa fa-github"></i></a></li>
+          <li><a href="#" class="icones"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/LoozBonita" class="icones"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#" class="icones"><i class="fa fa-instagram" ></i></a></li>
+    <div>
+  </nav>
+
+
+  	
     <%= yield %>
 
      <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->

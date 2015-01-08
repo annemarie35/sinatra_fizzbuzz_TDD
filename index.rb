@@ -1,7 +1,7 @@
 require 'sinatra'
+require 'sinatra/formkeeper'
 require './fizz_buzz_machine'
 require './roman_to_nb_machine'
-require 'sinatra/formkeeper'
 
 configure { set :server, :puma }
 
@@ -21,12 +21,20 @@ get '/index' do
   erb :index
 end
 
+get 'test' do
+  erb :test
+end
+
 get '/fizzbuzz' do
 	erb :fizzbuzz
 end
 
 get '/roman_to_nb' do
 	erb :roman_to_nb
+end
+
+get '/contact' do
+  erb :contact
 end
 
 post '/fizzbuzz' do
@@ -39,8 +47,7 @@ post '/roman_to_nb' do
   roman = params[:roman]
   @result = roman_to_nb(roman)
   erb :roman_to_nb
-  end
-
+end
 
 get '/about' do
   erb :about
@@ -48,5 +55,5 @@ end
 
 not_found do
   status 404
-  'not found'
+'not found'
 end
