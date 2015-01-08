@@ -65,5 +65,3 @@ describe "roman_to_nb" do
 		expect(roman_to_nb("CDIV")).to equal (404)
 	end
 end
-
-
