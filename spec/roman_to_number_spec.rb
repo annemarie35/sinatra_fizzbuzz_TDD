@@ -2,7 +2,7 @@ require './spec/spec_helper'
 
 describe "roman_to_nb" do 
 	
-	it '' I donne 1' do
+	it 'I donne 1' do
 		expect(roman_to_nb('I')).to equal (1)
 	end
 	it 'V donne 5' do
