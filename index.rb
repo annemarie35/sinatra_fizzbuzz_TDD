@@ -1,9 +1,10 @@
 require 'sinatra'
-require 'sinatra/formkeeper'
+require 'pony'
 require './fizz_buzz_machine'
 require './roman_to_nb_machine'
 
 configure { set :server, :puma }
+
 
 set :public_folder, 'public'
 
@@ -41,9 +42,9 @@ get '/garros' do
   erb :garros
 end
 
-post '/garros' do
-   erb :garros
-end
+# post '/garros' do
+#    erb :garros
+# end
 
 post '/fizzbuzz' do
   chiffre = params[:chiffre].to_i
@@ -64,4 +65,14 @@ end
 not_found do
   status 404
 'not found'
+end
+
+post '/contact' do
+  Pony.mail(
+    :from => params[:name],
+    :to => params[:email],
+    :subject => params[:objet] #+ "has contacted you via the Website",
+    :body => params[:message]
+  )
+   
 end
