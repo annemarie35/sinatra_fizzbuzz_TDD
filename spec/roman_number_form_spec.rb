@@ -11,6 +11,6 @@ end
 # ça permet d'utiliser rack/test avec rspec mais 
 # où ajoute on ça ? dans le fichier de test ou dans le spec_helper
 
-def app
+def mailer
     Sinatra::Application
 end
