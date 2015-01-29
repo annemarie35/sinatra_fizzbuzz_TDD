@@ -5,13 +5,23 @@ ruby '2.1.3'
 gem "rack"
 gem "sinatra", git: 'https://github.com/sinatra/sinatra.git'
 gem "activesupport"
-gem "pg"
 gem "puma"
-gem 'sinatra-formkeeper'
 gem 'pony'
+gem 'rake'
+gem 'activerecord'
+gem 'sinatra-activerecord'
+gem 'sqlite3'
+
+#Tells heroku to use postgreSQL in production/live
+group :production do
+	#gem 'pg'
+	#gem 'dm-postgres-adapter'
+	gem 'dm-sqlite-adapter'
+	#gem 'data_mapper'
+end
 
 group :development do
-  gem "shotgun"
+  # gem "shotgun"
   gem "sinatra-reloader"
 end
 

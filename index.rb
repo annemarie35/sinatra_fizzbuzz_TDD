@@ -2,11 +2,31 @@ require 'sinatra'
 require 'pony'
 require './fizz_buzz_machine'
 require './roman_to_nb_machine'
+require 'rubygems' 
+require 'sinatra/activerecord' 
 
 configure { set :server, :puma }
-
-
 set :public_folder, 'public'
+
+set :database, {adapter: "sqlite3", database: "issues.sqlite3"}
+# or set :database_file, "path/to/database.yml"
+
+#RTFM http://www.rubydoc.info/gems/sinatra-activerecord/2.0.4
+#https://github.com/janko-m/sinatra-activerecord
+
+class Issues < ActiveRecord::Base
+end
+
+get '/issue' do
+    erb :issue
+end
+
+post '/road_map' do
+  title = params[:title]
+  date = params[:date]
+  issue = params[:issue]
+  erb :road_map
+end
 
 get '/' do
   @name = "Simplon"
@@ -65,14 +85,4 @@ end
 not_found do
   status 404
 'not found'
-end
-
-post '/contact' do
-  Pony.mail(
-    :from => params[:name],
-    :to => params[:email],
-    :subject => params[:objet] #+ "has contacted you via the Website",
-    :body => params[:message]
-  )
-   
 end
