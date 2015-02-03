@@ -42,7 +42,7 @@ psql
 
 puis
 
-create role sensei with createdb login password 'something';
+create role USER with createdb login password 'PASSWORD';
 
 Pour vérifier que le changement est OK :
 
@@ -52,19 +52,17 @@ Pour voir l’aide de Postgres : \?
 
 Pour sortir de la console PSQL et revenir à la ligne de commande du terminal Ctrl D (deux fois !).
 
-- -- - -- - - -  -- 
+- -- - -- - - -  -- To do on 4 february - - -- -
 
-# create databases (tutorial : http://emily-platzer-makes-things.herokuapp.com/2014/05/05/sinatra-postgres-app.html)
+Try to deploy on heroku and get the message
 
-CD into project directory and run the following in the command line:
-    $ psql -d postgres -U <username> -f scripts/create_database_issues.sql
-
-    needs gem ruby-sequel-pg & gem ruby-sequel
-
-
-# create tables
-
-    $ sequel -m migrations postgres://<username>:<password>@localhost/issues_development
-    $ sequel -m migrations postgres://<username>:<password>@localhost/issues_test
-
-et là, ça ne fonctionne pas...
+```bash
+-----> Writing config/database.yml to read from DATABASE_URL
+       Could not detect rake tasks
+       ensure you can run `$ bundle exec rake -P` against your app with no environment variables present
+       and using the production group of your Gemfile.
+       This may be intentional, if you expected rake tasks to be run
+       cancel the build (CTRL+C) and fix the error then commit the fix:
+       rake aborted!
+       Invalid DATABASE_URL
+```
