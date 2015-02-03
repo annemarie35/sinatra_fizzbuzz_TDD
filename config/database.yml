@@ -1,0 +1,16 @@
+development:
+  adapter: postgresql
+  username: <%= ENV['DATABASE_USER_NAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: localhost
+  database: funk
+
+test:
+  adapter: postgresql
+  username: <%= ENV['DATABASE_USER_NAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: localhost
+  database: funk_test
+
+production:
+  url: <%= ENV['DATABASE_URL'] %>

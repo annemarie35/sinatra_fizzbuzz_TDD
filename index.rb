@@ -1,30 +1,29 @@
 require 'sinatra'
-require 'pony'
 require './fizz_buzz_machine'
 require './roman_to_nb_machine'
 require 'rubygems' 
-require 'sinatra/activerecord' 
+require 'sinatra/activerecord'
 
 configure { set :server, :puma }
 set :public_folder, 'public'
 
-set :database, {adapter: "sqlite3", database: "issues.sqlite3"}
-# or set :database_file, "path/to/database.yml"
 
 #RTFM http://www.rubydoc.info/gems/sinatra-activerecord/2.0.4
 #https://github.com/janko-m/sinatra-activerecord
 
-class Issues < ActiveRecord::Base
-end
-
-get '/issue' do
+ 
+  get '/issue' do
     erb :issue
-end
+  end
+
+#TUTO : http://emily-platzer-makes-things.herokuapp.com/2014/05/05/sinatra-postgres-app.html
 
 post '/road_map' do
-  title = params[:title]
-  date = params[:date]
-  issue = params[:issue]
+  # title = params[:title]
+  # date = params[:date]
+  # issue = params[:issue]
+"#{params[:tittle]} | #{params[:date]} | #{params[:issue]}"
+
   erb :road_map
 end
 
