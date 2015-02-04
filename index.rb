@@ -42,6 +42,11 @@ get "/issue/:id" do
   erb :issue
 end
 
+# get "/note/:id" do
+#   @note = Note.find_by_id(params[:id])
+#   erb :note
+# end
+
 get '/' do
   #@name = "Simplon"
   erb :index
@@ -92,25 +97,3 @@ end
 
 
 
-# class Note < ActiveRecord::Base
-# end
-
-#   get "/notes" do #road_map liste des issues
-#     @notes = Note.order("created_at DESC")
-#     redirect "/new" if @notes.empty?
-#     erb :notes
-#   end
-
-#   post "/new" do
-#     @note = Note.new(params[:note])
-#     if @note.save
-#       redirect "note/#{@note.id}"
-#     else
-#       erb :new
-#     end
-#   end
-
-#   get "/note/:id" do
-#     @note = Note.find_by_id(params[:id])
-#     erb :note
-#   end

@@ -1,15 +1,30 @@
 <div class="container">
 	<h1>Feuille de route du projet</h1>
 
-<ul>
-<% @issues.each do |issue| %>
-<li>
-<h2><a href="/issues/<%= issue.id %>"><%= issue.title %></a></h2>
-<p><%= issue.body %></p>
-</li>
-<% end %>
-</ul>
-<a href="/new_issue">Add a new issue</a>
+<h2><a href="/new_issue">Add a new issue</a></h2>
+
+<table class="table">
+   <caption>TA DAM LIST</caption>
+      <thead>
+
+         <tr>
+            <th>Titre</th>
+            <th>Pistes</th>
+            <th>to do/done<th>
+         </tr>
+      </thead>
+   <tbody>
+      <% @issues.each do |issue| %>
+      <tr>
+         <th><a href="/issue/<%= issue.id %>"><%= issue.title %></a></th>
+         <th><%= issue.body %></th>
+         <th>mettre un comment et/ou bouton supprimer</th>
+      </tr>
+      <% end %>
+   </tbody>
+</table>
+
+
 
 <table class="table">
    <caption>TA DAM LIST</caption>
