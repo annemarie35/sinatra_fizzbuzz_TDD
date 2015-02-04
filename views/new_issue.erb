@@ -1,0 +1,11 @@
+<div class="container">
+	<h1>Ajouter une nouvelle issue</h1>
+	<p>Pour nous contacter, N'hesitez pas à nous envoyez nous un message via ce formulaire </p>
+		<form action='/new_issue' method="post">
+		<label placeholder="Title">Titre de l'issue</label><br>
+		<input type="text" id="title" name="issue[title]"> <br>
+		<label placeholder="Note">Décrivez l'issue</label><br>
+		<textarea id="body" name="issue[body]" rows="10" cols="50"> </textarea> <br>
+		<input type="submit" value="Envoyer">
+	</form>
+<div>

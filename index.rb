@@ -10,39 +10,46 @@ set :public_folder, 'public'
 
 #RTFM http://www.rubydoc.info/gems/sinatra-activerecord/2.0.4
 #https://github.com/janko-m/sinatra-activerecord
-
- 
-  get '/issue' do
-    erb :issue
-  end
-
 #TUTO : http://emily-platzer-makes-things.herokuapp.com/2014/05/05/sinatra-postgres-app.html
 
-post '/road_map' do
-  # title = params[:title]
-  # date = params[:date]
-  # issue = params[:issue]
-"#{params[:tittle]} | #{params[:date]} | #{params[:issue]}"
+class Issue < ActiveRecord::Base
+end
 
+post '/new_issue' do
+# title = params[:title]
+# date = params[:date]
+# issue = params[:issue]
+  @issue = Issue.new(params[:issue])
+    if @issue.save
+      redirect "issue/#{@issue.id}"
+    else
+        erb :road_map
+    end
+  end
+
+get '/road_map' do
+  @issues = Issue.order("created_at DESC")
+  redirect "/new_issue" if @issues.empty?
   erb :road_map
+  end
+
+get '/new_issue' do
+  erb :new_issue
+end
+
+get "/issue/:id" do
+  @issue = Issue.find_by_id(params[:id])
+  erb :issue
 end
 
 get '/' do
-  @name = "Simplon"
+  #@name = "Simplon"
   erb :index
-end
-
-get '/road_map' do
-  erb :road_map
 end
 
 get '/index' do
   @name = "Simplon"
   erb :index
-end
-
-get 'test' do
-  erb :test
 end
 
 get '/fizzbuzz' do
@@ -61,10 +68,6 @@ get '/garros' do
   erb :garros
 end
 
-# post '/garros' do
-#    erb :garros
-# end
-
 post '/fizzbuzz' do
   chiffre = params[:chiffre].to_i
   @result = fizz_buzz(chiffre)
@@ -81,7 +84,33 @@ get '/about' do
   erb :about
 end
 
-not_found do
-  status 404
-'not found'
-end
+# not_found do
+#   status 404
+# 'not found'
+# end
+
+
+
+
+# class Note < ActiveRecord::Base
+# end
+
+#   get "/notes" do #road_map liste des issues
+#     @notes = Note.order("created_at DESC")
+#     redirect "/new" if @notes.empty?
+#     erb :notes
+#   end
+
+#   post "/new" do
+#     @note = Note.new(params[:note])
+#     if @note.save
+#       redirect "note/#{@note.id}"
+#     else
+#       erb :new
+#     end
+#   end
+
+#   get "/note/:id" do
+#     @note = Note.find_by_id(params[:id])
+#     erb :note
+#   end

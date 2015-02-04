@@ -8,6 +8,7 @@ gem "activesupport"
 gem "puma"
 gem 'rake'
 gem 'sinatra-activerecord'
+gem "activerecord"
 
 group :production do
 	gem 'pg'

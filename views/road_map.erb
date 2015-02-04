@@ -1,6 +1,16 @@
 <div class="container">
 	<h1>Feuille de route du projet</h1>
 
+<ul>
+<% @issues.each do |issue| %>
+<li>
+<h2><a href="/issues/<%= issue.id %>"><%= issue.title %></a></h2>
+<p><%= issue.body %></p>
+</li>
+<% end %>
+</ul>
+<a href="/new_issue">Add a new issue</a>
+
 <table class="table">
    <caption>TA DAM LIST</caption>
    <thead>
