@@ -14,3 +14,11 @@ test:
 
 production:
   url: <%= ENV['DATABASE_URL'] %>
+
+#To use PostgreSQL locally with a Rails app your database.yml should contain the following configuration:
+
+# development:
+#   adapter: postgresql
+#   host: localhost
+#   username: user
+#   database: app-dev

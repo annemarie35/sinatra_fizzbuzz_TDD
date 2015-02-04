@@ -2,9 +2,9 @@
 ====================
 
 
-## But du projet : 
+## But du projet :
 
-Découvrir Sinatra en créant une application permettant d'avoir une interface pour plusieurs programmes développés pendant les Katas que nous faisons à Simplon : 
+Découvrir Sinatra en créant une application permettant d'avoir une interface pour plusieurs programmes développés pendant les Katas que nous faisons à Simplon :
 
 - fizzbuzz
 - Roman to Number
@@ -15,7 +15,7 @@ Le tout en TDD et en utilisant rspec.
 ## Comment récupérer cette appli :
 
 - faire un git clone
-- ouvrir le répertoire 
+- ouvrir le répertoire
 - lancer `bundle install`
 - lancer les tests avec la commande `rspec`
 
@@ -28,7 +28,11 @@ Le tout en TDD et en utilisant rspec.
 
 # To Do
 
-- for the contact page https://addons.heroku.com/sendgrid / see the account https://github.com/craftninja/actionmailer_basics
+- for the contact page https://addons.heroku.com/sendgrid /
+https://support.sendgrid.com/hc/en-us/articles/200181998-Heroku-Users-Find-your-Sendgrid-Credentials
+
+ - settings pg & heroku
+ see https://devcenter.heroku.com/articles/getting-started-with-ruby#use-a-database
 
 #Install POSTGRES
 
