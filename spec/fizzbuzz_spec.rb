@@ -1,6 +1,7 @@
 require './spec/spec_helper'
+require './lib/fizz_buzz_machine'
 
-describe "fizz_buzz" do 
+describe "fizz_buzz" do
 
 	it "True donne true" do
 		expect(true).to eq(true)

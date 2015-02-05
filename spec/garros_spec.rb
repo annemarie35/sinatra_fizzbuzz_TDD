@@ -1,4 +1,5 @@
 require './spec/spec_helper'
+require './lib/garros_machine.rb'
 
 describe "garros" do
 	it "test de mise en place" do

@@ -23,4 +23,11 @@ ActiveRecord::Schema.define(version: 20150204105021) do
     t.datetime "updated_at"
   end
 
+  create_table "notes", force: :cascade do |t|
+    t.string   "title"
+    t.string   "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end

@@ -1,7 +1,7 @@
 require 'sinatra'
-require './fizz_buzz_machine'
-require './roman_to_nb_machine'
-require 'rubygems' 
+require './lib/fizz_buzz_machine'
+require './lib/roman_to_nb_machine'
+require 'rubygems'
 require 'sinatra/activerecord'
 
 configure { set :server, :puma }
@@ -93,7 +93,3 @@ end
 #   status 404
 # 'not found'
 # end
-
-
-
-

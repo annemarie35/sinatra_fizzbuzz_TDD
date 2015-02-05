@@ -31,10 +31,15 @@ Le tout en TDD et en utilisant rspec.
 - for the contact page https://addons.heroku.com/sendgrid /
 https://support.sendgrid.com/hc/en-us/articles/200181998-Heroku-Users-Find-your-Sendgrid-Credentials
 
- - settings pg & heroku
+# settings pg & heroku
  see https://devcenter.heroku.com/articles/getting-started-with-ruby#use-a-database
 
-#Install POSTGRES
+ lancer un rake db:migrate sur heroku https://devcenter.heroku.com/articles/rake
+ ```bash
+ heroku run rake db:migrate
+ ```
+
+## Install POSTGRES
 
 Configurer le compte utilisateur dans PostgreSQL :
 

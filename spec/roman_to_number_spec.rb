@@ -1,7 +1,8 @@
 require './spec/spec_helper'
+require './lib/roman_to_nb_machine'
 
-describe 'roman_to_nb' do 
-	
+describe 'roman_to_nb' do
+
 	it 'I donne 1' do
 		expect(roman_to_nb('I')).to equal (1)
 	end
