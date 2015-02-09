@@ -25,6 +25,10 @@ Le tout en TDD et en utilisant rspec.
 
 - l'appli est visible en ligne à l'adresse [https://simplon2015exercices.herokuapp.com/](https://simplon2015exercices.herokuapp.com/)
 - déployer en lançant la commande `$ git push heroku master`
+`heroku rake -T `
+
+- `heroku run rake db:schema:load`
+
 
 # To Do
 

@@ -8,6 +8,7 @@
       <thead>
 
          <tr>
+						<th>Date</th>
             <th>Titre</th>
             <th>Pistes</th>
             <th>to do/done<th>
@@ -16,6 +17,7 @@
    <tbody>
       <% @issues.each do |issue| %>
       <tr>
+				<th><%= issue.created_at %></th>
          <th><a href="/issue/<%= issue.id %>"><%= issue.title %></a></th>
          <th><%= issue.body %></th>
          <th>mettre un comment et/ou bouton supprimer</th>
