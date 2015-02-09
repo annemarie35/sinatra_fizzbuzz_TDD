@@ -27,15 +27,20 @@ Le tout en TDD et en utilisant rspec.
 - déployer en lançant la commande `$ git push heroku master`
 `heroku rake -T `
 
-- `heroku run rake db:schema:load`
+- Mettre à jour la base de données en production `heroku run rake db:schema:load`
 
 
-# To Do
+## To Do
 
 - for the contact page https://addons.heroku.com/sendgrid /
 https://support.sendgrid.com/hc/en-us/articles/200181998-Heroku-Users-Find-your-Sendgrid-Credentials
 
-# settings pg & heroku
+- continuer sur la to-do list http://www.sitepoint.com/a-simple-content-management-system-in-sinatra/
+http://vitobotta.com/sinatra-contact-form-jekyll/
+
+--> passer à Jekyll voir Rails ? http://jekyllrb.com/news/
+
+## settings pg & heroku
  see https://devcenter.heroku.com/articles/getting-started-with-ruby#use-a-database
 
  lancer un rake db:migrate sur heroku https://devcenter.heroku.com/articles/rake
@@ -45,37 +50,22 @@ https://support.sendgrid.com/hc/en-us/articles/200181998-Heroku-Users-Find-your-
 
 ## Install POSTGRES
 
-Configurer le compte utilisateur dans PostgreSQL :
+Configurer le compte utilisateur dans PostgreSQL en local :
 
-sudo su postgres
-
-puis
-
-psql
+`sudo su postgres`
 
 puis
 
-create role USER with createdb login password 'PASSWORD';
+`psql`
+
+puis
+
+`create role USER with createdb login password 'PASSWORD';`
 
 Pour vérifier que le changement est OK :
 
-\dgh
+`\dgh`
 
 Pour voir l’aide de Postgres : \?
 
 Pour sortir de la console PSQL et revenir à la ligne de commande du terminal Ctrl D (deux fois !).
-
-- -- - -- - - -  -- To do on 4 february - - -- -
-
-Try to deploy on heroku and get the message
-
-```bash
------> Writing config/database.yml to read from DATABASE_URL
-       Could not detect rake tasks
-       ensure you can run `$ bundle exec rake -P` against your app with no environment variables present
-       and using the production group of your Gemfile.
-       This may be intentional, if you expected rake tasks to be run
-       cancel the build (CTRL+C) and fix the error then commit the fix:
-       rake aborted!
-       Invalid DATABASE_URL
-```
