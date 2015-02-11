@@ -31,7 +31,7 @@ get '/road_map' do
   @issues = Issue.order("created_at DESC")
   redirect "/new_issue" if @issues.empty?
   erb :road_map
-  end
+end
 
 get '/new_issue' do
   erb :new_issue

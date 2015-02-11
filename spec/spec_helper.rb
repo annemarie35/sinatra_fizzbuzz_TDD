@@ -1,6 +1,7 @@
-ENV=['RACK_TEST']='test'
+require 'rack/test'
 
-# require File.join(File.dirname(__FILE__), '..', 'index.rb')
+
+ENV['RACK_TEST']='test'
 
 def app
   Sinatra::Application
