@@ -6,12 +6,12 @@ gem "rack"
 gem "sinatra", git: 'https://github.com/sinatra/sinatra.git'
 gem "activesupport"
 gem "puma"
-gem 'rake'
-gem 'sinatra-activerecord'
+gem "rake"
+gem "sinatra-activerecord"
 gem "activerecord"
 
 group :production do
-	gem 'pg'
+	gem "pg"
 end
 
 group :development do
