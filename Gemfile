@@ -9,6 +9,7 @@ gem "puma"
 gem "rake"
 gem "sinatra-activerecord"
 gem "activerecord"
+gem 'sendgrid-ruby'
 
 group :production do
 	gem "pg"
