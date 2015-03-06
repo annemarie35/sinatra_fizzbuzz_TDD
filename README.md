@@ -32,16 +32,17 @@ Le tout en TDD et en utilisant rspec.
 
 ## To Do
 
---> passer à Jekyll voir Rails ? http://jekyllrb.com/news/
-- mailer avec sendgrid : https://github.com/sendgrid/sendgrid-ruby
+- continuer l'ajout d'un formulaire de contact via mailer avec sendgrid : https://github.com/sendgrid/sendgrid-ruby
 https://sendgrid.com/docs/Code_Examples/ruby.html
+
+- faire le ménage dans l'onglet feuille de route maintenant que le formulaire d'ajout d'issue fonctionne et que la bdd pg est installée
 
 
 ## settings pg & heroku
  see https://devcenter.heroku.com/articles/getting-started-with-ruby#use-a-database
 
- lancer un rake db:migrate sur heroku https://devcenter.heroku.com/articles/rake
- 
+ lancer un rake db:migrate sur heroku !! https://devcenter.heroku.com/articles/rake
+
  ```bash
  heroku run rake db:migrate
  ```
