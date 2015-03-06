@@ -33,6 +33,9 @@ Le tout en TDD et en utilisant rspec.
 ## To Do
 
 --> passer à Jekyll voir Rails ? http://jekyllrb.com/news/
+- mailer avec sendgrid : https://github.com/sendgrid/sendgrid-ruby
+https://sendgrid.com/docs/Code_Examples/ruby.html
+
 
 ## settings pg & heroku
  see https://devcenter.heroku.com/articles/getting-started-with-ruby#use-a-database

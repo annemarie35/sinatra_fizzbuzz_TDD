@@ -42,13 +42,7 @@ get "/issue/:id" do
   erb :issue
 end
 
-# get "/note/:id" do
-#   @note = Note.find_by_id(params[:id])
-#   erb :note
-# end
-
 get '/' do
-  #@name = "Simplon"
   erb :index
 end
 
